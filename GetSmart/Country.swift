@@ -7,17 +7,33 @@
 //
 
 import Foundation
+import CoreData
 
 class Country {
 
+    let code: String
     let name: String
     let capital: String
     let flag: String
+    let borders: [String]
+    let subregion: String
 
     init(data: [String: Any]) {
+        self.code = data["alpha3Code"] as! String
         self.name = data["name"] as! String
         self.capital = data["capital"] as! String
         self.flag = data["flag"] as! String
+        self.borders = data["borders"] as! [String]
+        self.subregion = data["subregion"] as! String
     }
+    
+    static let Unknown: Country = Country(data:
+        ["alpha3Code": "-",
+         "name": "-",
+         "capital": "-",
+         "flag": "-",
+         "borders": [],
+         "subregion": "-"]
+    )
 
 }

@@ -44,5 +44,29 @@ extension Array where Element: Country {
             return country.name
         })
     }
+    
+    func filterBy(code: String) -> Country {
+        let filters = self.filter({ (c) -> Bool in
+            c.code == code
+        })
+    
+        guard let country = filters.first else {
+            return Country.Unknown
+        }
+        
+        return country
+    }
+    
+    func neighboursOf(country: Country) -> [Country] {
+        return country.borders.map { (neighbour) -> Country in
+            self.filterBy(code: neighbour)
+        }
+    }
+    
+    func inSameRegionAs(country: Country) -> [Country] {
+        return self.filter({ (c) -> Bool in
+            c.subregion == country.subregion
+        })
+    }
 
 }

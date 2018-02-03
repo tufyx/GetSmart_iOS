@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8E825FB1FDC3ED300BAAD4E /* World.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */; };
+		F8E826011FDC4C4400BAAD4E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */; };
+		F8E826031FDC4E3D00BAAD4E /* CDContinent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */; };
+		F8E826051FDC4F9600BAAD4E /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826041FDC4F9600BAAD4E /* Region.swift */; };
+		F8E826071FDC502500BAAD4E /* CDCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826061FDC502500BAAD4E /* CDCountry.swift */; };
 		FF89B5DC1FAFA7F8003ABD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */; };
 		FF89B5E11FAFA7F8003ABD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */; };
 		FF89B5E31FAFA7F8003ABD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = World.xcdatamodel; sourceTree = "<group>"; };
+		F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContinent.swift; sourceTree = "<group>"; };
+		F8E826041FDC4F9600BAAD4E /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		F8E826061FDC502500BAAD4E /* CDCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCountry.swift; sourceTree = "<group>"; };
 		FF89B5D81FAFA7F8003ABD18 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF89B5E01FAFA7F8003ABD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +136,7 @@
 				FF993A321FB1159D0043E1F8 /* ViewController.swift */,
 				FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */,
 				FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */,
+				F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */,
 				FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */,
 				FF89B5E41FAFA7F8003ABD18 /* LaunchScreen.storyboard */,
 				FF89B5E71FAFA7F8003ABD18 /* Info.plist */,
@@ -142,6 +153,10 @@
 				FF89B61F1FB060CA003ABD18 /* ResultsViewController.swift */,
 				FF993A2E1FB111C70043E1F8 /* AnswerDetailCell.swift */,
 				FF993A301FB111F00043E1F8 /* ResultsDetailViewController.swift */,
+				F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */,
+				F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */,
+				F8E826041FDC4F9600BAAD4E /* Region.swift */,
+				F8E826061FDC502500BAAD4E /* CDCountry.swift */,
 			);
 			path = GetSmart;
 			sourceTree = "<group>";
@@ -302,16 +317,21 @@
 				FF89B6141FAFB4D7003ABD18 /* Country.swift in Sources */,
 				FF89B60C1FAFAA47003ABD18 /* Reusable.swift in Sources */,
 				FF89B61A1FAFBB51003ABD18 /* StringExtension.swift in Sources */,
+				F8E826071FDC502500BAAD4E /* CDCountry.swift in Sources */,
 				FF89B61C1FB0581F003ABD18 /* AnswerCell.swift in Sources */,
 				FF993A331FB1159D0043E1F8 /* ViewController.swift in Sources */,
 				FF89B60E1FAFAA78003ABD18 /* ContinentCell.swift in Sources */,
+				F8E825FB1FDC3ED300BAAD4E /* World.xcdatamodeld in Sources */,
 				FF993A2F1FB111C70043E1F8 /* AnswerDetailCell.swift in Sources */,
 				FF89B6161FAFB64C003ABD18 /* ArrayExtension.swift in Sources */,
+				F8E826051FDC4F9600BAAD4E /* Region.swift in Sources */,
 				FF993A311FB111F00043E1F8 /* ResultsDetailViewController.swift in Sources */,
 				FF89B6121FAFB446003ABD18 /* PlistReader.swift in Sources */,
 				FF89B6181FAFB8B2003ABD18 /* QuizViewController.swift in Sources */,
 				FF89B5DC1FAFA7F8003ABD18 /* AppDelegate.swift in Sources */,
+				F8E826031FDC4E3D00BAAD4E /* CDContinent.swift in Sources */,
 				FF89B60A1FAFA993003ABD18 /* ContinentListViewController.swift in Sources */,
+				F8E826011FDC4C4400BAAD4E /* CoreDataStore.swift in Sources */,
 				FF89B6201FB060CA003ABD18 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FK6UDTFUU5;
+				DEVELOPMENT_TEAM = 7AL85EHGD2;
 				INFOPLIST_FILE = GetSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tufyx.GetSmart;
@@ -494,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FK6UDTFUU5;
+				DEVELOPMENT_TEAM = 7AL85EHGD2;
 				INFOPLIST_FILE = GetSmart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tufyx.GetSmart;
@@ -610,6 +630,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */,
+			);
+			currentVersion = F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */;
+			path = World.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF89B5D01FAFA7F8003ABD18 /* Project object */;
 }

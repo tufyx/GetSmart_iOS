@@ -13,5 +13,9 @@ extension String {
     func forCountry(country: String) -> String {
         return self.replacingOccurrences(of: "[COUNTRY]", with: country)
     }
+    
+    var forFlag: String {
+        return self.replacingOccurrences(of: " ", with: "-").lowercased()
+    }
 
 }

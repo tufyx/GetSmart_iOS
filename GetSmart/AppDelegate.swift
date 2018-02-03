@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var coreDataStore: CoreDataStore = CoreDataStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        bootstrap()
         return true
     }
 
@@ -39,8 +41,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        coreDataStore.saveContext()
     }
-
 
 }
 
+extension AppDelegate {
+    
+    func bootstrap() {
+        let context = coreDataStore.managedObjectContext
+        let continents = ["Europe", "Africa", "Oceania", "Asia", "Americas"]
+        
+        continents.forEach { (c) in
+            let entity = NSEntityDescription.entity(forEntityName: "CDContinent", in: context)
+            let continent = NSManagedObject(entity: entity!, insertInto: context)
+            continent.setValue(c, forKey: "name")
+        }
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
+    
+}

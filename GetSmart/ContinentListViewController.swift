@@ -8,21 +8,25 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ContinentListViewController: UITableViewController, Reusable {
 
-    var dataSource: [String] = [
-        "Europe",
-        "North America",
-        "South America",
-        "Asia",
-        "Africa",
-        "Australia & Oceania"
-    ]
+    var dataSource: [NSManagedObject] = []
+    
+    var coreDataStore: CoreDataStore = CoreDataStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        
+        let request = NSFetchRequest<CDContinent>(entityName: "CDContinent")
+        do {
+            dataSource = try coreDataStore.managedObjectContext.fetch(request)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -31,8 +35,10 @@ class ContinentListViewController: UITableViewController, Reusable {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ContinentCell = tableView.dequeueReusableCell(for: indexPath)
+        let item = dataSource[indexPath.row]
+        let name = item.value(forKey: "name") as! String
         cell.delegate = self
-        cell.viewData = ContinentCell.ViewData(name: dataSource[indexPath.row])
+        cell.viewData = ContinentCell.ViewData(name: name)
         return cell
     }
 

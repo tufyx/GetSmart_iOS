@@ -11,7 +11,7 @@ import UIKit
 
 protocol CellDelegate: class {
 
-    func didTapCell(continent: String)
+    func didTapCellFor(continent: CDContinent)
 
 }
 
@@ -28,24 +28,27 @@ class ContinentCell: UITableViewCell, Reusable {
             contentView.addGestureRecognizer(
                 UITapGestureRecognizer(
                     target: self,
-                    action: #selector(didTapCell))
+                    action: #selector(didTapCell)
+                )
             )
         }
     }
 
     @objc func didTapCell() {
         if let vd = viewData, let d = delegate {
-            d.didTapCell(continent: vd.name)
+            d.didTapCellFor(continent: vd.continent)
         }
 
     }
 
     struct ViewData {
 
+        let continent: CDContinent
         let name: String
 
-        init(name: String) {
-            self.name = name
+        init(continent: CDContinent) {
+            self.continent = continent
+            self.name = continent.name
         }
 
     }

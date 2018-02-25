@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CDContinent" representedClassName=".CDContinent" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="countries" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="CDCountry" inverseName="continent" inverseEntity="CDCountry" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="CDCountry" representedClassName=".CDCountry" syncable="YES">
         <attribute name="capital" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flag" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="continent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDContinent" inverseName="countries" inverseEntity="CDContinent" syncable="YES"/>
-        <relationship name="neighbour" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCountry" inverseName="neighbour" inverseEntity="CDCountry" syncable="YES"/>
+        <relationship name="neighbours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDCountry" inverseName="neighbours" inverseEntity="CDCountry" syncable="YES"/>
         <relationship name="region" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDRegion" inverseName="countries" inverseEntity="CDRegion" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="code"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="CDRegion" representedClassName=".CDRegion" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="countries" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="CDCountry" inverseName="region" inverseEntity="CDCountry" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="CDContinent" positionX="232" positionY="-18" width="128" height="75"/>
-        <element name="CDCountry" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="CDCountry" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="CDRegion" positionX="232" positionY="81" width="128" height="75"/>
     </elements>
 </model>

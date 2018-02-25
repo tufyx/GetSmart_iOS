@@ -7,31 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8E825FB1FDC3ED300BAAD4E /* World.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */; };
-		F8E826011FDC4C4400BAAD4E /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */; };
-		F8E826031FDC4E3D00BAAD4E /* CDContinent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */; };
-		F8E826051FDC4F9600BAAD4E /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826041FDC4F9600BAAD4E /* Region.swift */; };
-		F8E826071FDC502500BAAD4E /* CDCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E826061FDC502500BAAD4E /* CDCountry.swift */; };
-		FF89B5DC1FAFA7F8003ABD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */; };
+		F808352B2041D38300475C71 /* World.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F80835292041D38300475C71 /* World.xcdatamodeld */; };
+		F87075FC2041CD6800411A62 /* CDRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075F82041CD6700411A62 /* CDRegion.swift */; };
+		F87075FD2041CD6800411A62 /* CDCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075F92041CD6700411A62 /* CDCountry.swift */; };
+		F87075FE2041CD6800411A62 /* CDContinent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075FA2041CD6800411A62 /* CDContinent.swift */; };
+		F87075FF2041CD6800411A62 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075FB2041CD6800411A62 /* CoreDataStore.swift */; };
+		F870760E2041CF3C00411A62 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870760B2041CF3C00411A62 /* ResultsViewController.swift */; };
+		F870760F2041CF3C00411A62 /* ResultsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870760C2041CF3C00411A62 /* ResultsDetailViewController.swift */; };
+		F87076102041CF3C00411A62 /* AnswerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870760D2041CF3C00411A62 /* AnswerDetailCell.swift */; };
+		F870761D2041CFC300411A62 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870761B2041CFC300411A62 /* ArrayExtension.swift */; };
+		F870761E2041CFC300411A62 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870761C2041CFC300411A62 /* StringExtension.swift */; };
+		F87076202041CFDE00411A62 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870761F2041CFDE00411A62 /* Reusable.swift */; };
+		F870762C2041D17400411A62 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870762B2041D17400411A62 /* PlistReader.swift */; };
+		F870762F2041D18200411A62 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870762D2041D18200411A62 /* QuizViewController.swift */; };
+		F87076302041D18200411A62 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870762E2041D18200411A62 /* AnswerCell.swift */; };
+		F87076352041D1BC00411A62 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = F87076322041D1BC00411A62 /* Countries.plist */; };
+		F87076362041D1BC00411A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87076332041D1BC00411A62 /* AppDelegate.swift */; };
+		F87076372041D1BC00411A62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F87076342041D1BC00411A62 /* Info.plist */; };
+		F870763A2041D21100411A62 /* GetSmartUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87076392041D21000411A62 /* GetSmartUserDefaults.swift */; };
+		F870763D2041D32200411A62 /* ContinentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763B2041D32100411A62 /* ContinentCell.swift */; };
+		F870763E2041D32200411A62 /* ContinentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763C2041D32200411A62 /* ContinentListViewController.swift */; };
+		F8C011FD2042DC61005636B8 /* AnswerDetailWrongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */; };
 		FF89B5E11FAFA7F8003ABD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */; };
 		FF89B5E31FAFA7F8003ABD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */; };
 		FF89B5E61FAFA7F8003ABD18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5E41FAFA7F8003ABD18 /* LaunchScreen.storyboard */; };
 		FF89B5F11FAFA7F8003ABD18 /* GetSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B5F01FAFA7F8003ABD18 /* GetSmartTests.swift */; };
 		FF89B5FC1FAFA7F8003ABD18 /* GetSmartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B5FB1FAFA7F8003ABD18 /* GetSmartUITests.swift */; };
-		FF89B60A1FAFA993003ABD18 /* ContinentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6091FAFA993003ABD18 /* ContinentListViewController.swift */; };
-		FF89B60C1FAFAA47003ABD18 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B60B1FAFAA47003ABD18 /* Reusable.swift */; };
-		FF89B60E1FAFAA78003ABD18 /* ContinentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B60D1FAFAA78003ABD18 /* ContinentCell.swift */; };
-		FF89B6101FAFB29B003ABD18 /* Europe.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF89B60F1FAFB29B003ABD18 /* Europe.plist */; };
-		FF89B6121FAFB446003ABD18 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6111FAFB446003ABD18 /* PlistReader.swift */; };
 		FF89B6141FAFB4D7003ABD18 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6131FAFB4D7003ABD18 /* Country.swift */; };
-		FF89B6161FAFB64C003ABD18 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6151FAFB64C003ABD18 /* ArrayExtension.swift */; };
-		FF89B6181FAFB8B2003ABD18 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6171FAFB8B2003ABD18 /* QuizViewController.swift */; };
-		FF89B61A1FAFBB51003ABD18 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B6191FAFBB51003ABD18 /* StringExtension.swift */; };
-		FF89B61C1FB0581F003ABD18 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B61B1FB0581F003ABD18 /* AnswerCell.swift */; };
-		FF89B6201FB060CA003ABD18 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89B61F1FB060CA003ABD18 /* ResultsViewController.swift */; };
-		FF993A2F1FB111C70043E1F8 /* AnswerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF993A2E1FB111C70043E1F8 /* AnswerDetailCell.swift */; };
-		FF993A311FB111F00043E1F8 /* ResultsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF993A301FB111F00043E1F8 /* ResultsDetailViewController.swift */; };
-		FF993A331FB1159D0043E1F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF993A321FB1159D0043E1F8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,37 +54,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = World.xcdatamodel; sourceTree = "<group>"; };
-		F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContinent.swift; sourceTree = "<group>"; };
-		F8E826041FDC4F9600BAAD4E /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
-		F8E826061FDC502500BAAD4E /* CDCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCountry.swift; sourceTree = "<group>"; };
+		F808352A2041D38300475C71 /* World.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = World.xcdatamodel; sourceTree = "<group>"; };
+		F87075F82041CD6700411A62 /* CDRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDRegion.swift; path = CoreData/CDRegion.swift; sourceTree = "<group>"; };
+		F87075F92041CD6700411A62 /* CDCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDCountry.swift; path = CoreData/CDCountry.swift; sourceTree = "<group>"; };
+		F87075FA2041CD6800411A62 /* CDContinent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDContinent.swift; path = CoreData/CDContinent.swift; sourceTree = "<group>"; };
+		F87075FB2041CD6800411A62 /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = CoreData/CoreDataStore.swift; sourceTree = "<group>"; };
+		F870760B2041CF3C00411A62 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = Results/ResultsViewController.swift; sourceTree = "<group>"; };
+		F870760C2041CF3C00411A62 /* ResultsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsDetailViewController.swift; path = Results/ResultsDetailViewController.swift; sourceTree = "<group>"; };
+		F870760D2041CF3C00411A62 /* AnswerDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerDetailCell.swift; path = Results/AnswerDetailCell.swift; sourceTree = "<group>"; };
+		F870761B2041CFC300411A62 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
+		F870761C2041CFC300411A62 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		F870761F2041CFDE00411A62 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Extensions/Reusable.swift; sourceTree = "<group>"; };
+		F870762B2041D17400411A62 /* PlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlistReader.swift; path = Utilities/PlistReader.swift; sourceTree = "<group>"; };
+		F870762D2041D18200411A62 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Quiz/QuizViewController.swift; sourceTree = "<group>"; };
+		F870762E2041D18200411A62 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerCell.swift; path = Quiz/AnswerCell.swift; sourceTree = "<group>"; };
+		F87076322041D1BC00411A62 /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Countries.plist; path = "Support Files/Countries.plist"; sourceTree = "<group>"; };
+		F87076332041D1BC00411A62 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Support Files/AppDelegate.swift"; sourceTree = "<group>"; };
+		F87076342041D1BC00411A62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Support Files/Info.plist"; sourceTree = "<group>"; };
+		F87076392041D21000411A62 /* GetSmartUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSmartUserDefaults.swift; path = "User Defaults/GetSmartUserDefaults.swift"; sourceTree = "<group>"; };
+		F870763B2041D32100411A62 /* ContinentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContinentCell.swift; path = Continents/ContinentCell.swift; sourceTree = "<group>"; };
+		F870763C2041D32200411A62 /* ContinentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContinentListViewController.swift; path = Continents/ContinentListViewController.swift; sourceTree = "<group>"; };
+		F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerDetailWrongCell.swift; sourceTree = "<group>"; };
 		FF89B5D81FAFA7F8003ABD18 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF89B5E01FAFA7F8003ABD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF89B5E51FAFA7F8003ABD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FF89B5E71FAFA7F8003ABD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF89B5EC1FAFA7F8003ABD18 /* GetSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF89B5F01FAFA7F8003ABD18 /* GetSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSmartTests.swift; sourceTree = "<group>"; };
 		FF89B5F21FAFA7F8003ABD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF89B5F71FAFA7F8003ABD18 /* GetSmartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetSmartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF89B5FB1FAFA7F8003ABD18 /* GetSmartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSmartUITests.swift; sourceTree = "<group>"; };
 		FF89B5FD1FAFA7F8003ABD18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF89B6091FAFA993003ABD18 /* ContinentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentListViewController.swift; sourceTree = "<group>"; };
-		FF89B60B1FAFAA47003ABD18 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		FF89B60D1FAFAA78003ABD18 /* ContinentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentCell.swift; sourceTree = "<group>"; };
-		FF89B60F1FAFB29B003ABD18 /* Europe.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Europe.plist; sourceTree = "<group>"; };
-		FF89B6111FAFB446003ABD18 /* PlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
 		FF89B6131FAFB4D7003ABD18 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		FF89B6151FAFB64C003ABD18 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		FF89B6171FAFB8B2003ABD18 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		FF89B6191FAFBB51003ABD18 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		FF89B61B1FB0581F003ABD18 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
-		FF89B61F1FB060CA003ABD18 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		FF993A2E1FB111C70043E1F8 /* AnswerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerDetailCell.swift; sourceTree = "<group>"; };
-		FF993A301FB111F00043E1F8 /* ResultsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDetailViewController.swift; sourceTree = "<group>"; };
-		FF993A321FB1159D0043E1F8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F87075F72041CCFF00411A62 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F80835292041D38300475C71 /* World.xcdatamodeld */,
+				F87075FA2041CD6800411A62 /* CDContinent.swift */,
+				F87075F92041CD6700411A62 /* CDCountry.swift */,
+				F87075F82041CD6700411A62 /* CDRegion.swift */,
+				F87075FB2041CD6800411A62 /* CoreDataStore.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		F87076052041CDCA00411A62 /* Continents */ = {
+			isa = PBXGroup;
+			children = (
+				F870763B2041D32100411A62 /* ContinentCell.swift */,
+				F870763C2041D32200411A62 /* ContinentListViewController.swift */,
+			);
+			name = Continents;
+			sourceTree = "<group>";
+		};
+		F870760A2041CE0D00411A62 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */,
+				F870760D2041CF3C00411A62 /* AnswerDetailCell.swift */,
+				F870760C2041CF3C00411A62 /* ResultsDetailViewController.swift */,
+				F870760B2041CF3C00411A62 /* ResultsViewController.swift */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		F87076152041CF7B00411A62 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				F870762E2041D18200411A62 /* AnswerCell.swift */,
+				F870762D2041D18200411A62 /* QuizViewController.swift */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+		F870761A2041CF9200411A62 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F870761F2041CFDE00411A62 /* Reusable.swift */,
+				F870761B2041CFC300411A62 /* ArrayExtension.swift */,
+				F870761C2041CFC300411A62 /* StringExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		F87076232041D10A00411A62 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F870762B2041D17400411A62 /* PlistReader.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		F870762A2041D12F00411A62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F87076332041D1BC00411A62 /* AppDelegate.swift */,
+				F87076322041D1BC00411A62 /* Countries.plist */,
+				F87076342041D1BC00411A62 /* Info.plist */,
+				FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		F87076312041D1A300411A62 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */,
+				FF89B5E41FAFA7F8003ABD18 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		F87076382041D1D700411A62 /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				F87076392041D21000411A62 /* GetSmartUserDefaults.swift */,
+			);
+			name = "User Defaults";
+			sourceTree = "<group>";
+		};
 		FF89B5CF1FAFA7F8003ABD18 = {
 			isa = PBXGroup;
 			children = (
@@ -133,30 +223,16 @@
 		FF89B5DA1FAFA7F8003ABD18 /* GetSmart */ = {
 			isa = PBXGroup;
 			children = (
-				FF993A321FB1159D0043E1F8 /* ViewController.swift */,
-				FF89B5DB1FAFA7F8003ABD18 /* AppDelegate.swift */,
-				FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */,
-				F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */,
-				FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */,
-				FF89B5E41FAFA7F8003ABD18 /* LaunchScreen.storyboard */,
-				FF89B5E71FAFA7F8003ABD18 /* Info.plist */,
-				FF89B6091FAFA993003ABD18 /* ContinentListViewController.swift */,
-				FF89B60B1FAFAA47003ABD18 /* Reusable.swift */,
-				FF89B60D1FAFAA78003ABD18 /* ContinentCell.swift */,
-				FF89B60F1FAFB29B003ABD18 /* Europe.plist */,
-				FF89B6111FAFB446003ABD18 /* PlistReader.swift */,
+				F870762A2041D12F00411A62 /* Support Files */,
+				F87076232041D10A00411A62 /* Utilities */,
+				F870761A2041CF9200411A62 /* Extension */,
+				F87076152041CF7B00411A62 /* Quiz */,
+				F870760A2041CE0D00411A62 /* Results */,
+				F87076052041CDCA00411A62 /* Continents */,
+				F87076312041D1A300411A62 /* Storyboard */,
 				FF89B6131FAFB4D7003ABD18 /* Country.swift */,
-				FF89B6151FAFB64C003ABD18 /* ArrayExtension.swift */,
-				FF89B6171FAFB8B2003ABD18 /* QuizViewController.swift */,
-				FF89B6191FAFBB51003ABD18 /* StringExtension.swift */,
-				FF89B61B1FB0581F003ABD18 /* AnswerCell.swift */,
-				FF89B61F1FB060CA003ABD18 /* ResultsViewController.swift */,
-				FF993A2E1FB111C70043E1F8 /* AnswerDetailCell.swift */,
-				FF993A301FB111F00043E1F8 /* ResultsDetailViewController.swift */,
-				F8E826001FDC4C4400BAAD4E /* CoreDataStore.swift */,
-				F8E826021FDC4E3D00BAAD4E /* CDContinent.swift */,
-				F8E826041FDC4F9600BAAD4E /* Region.swift */,
-				F8E826061FDC502500BAAD4E /* CDCountry.swift */,
+				F87075F72041CCFF00411A62 /* CoreData */,
+				F87076382041D1D700411A62 /* User Defaults */,
 			);
 			path = GetSmart;
 			sourceTree = "<group>";
@@ -287,8 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF89B5E61FAFA7F8003ABD18 /* LaunchScreen.storyboard in Resources */,
+				F87076352041D1BC00411A62 /* Countries.plist in Resources */,
 				FF89B5E31FAFA7F8003ABD18 /* Assets.xcassets in Resources */,
-				FF89B6101FAFB29B003ABD18 /* Europe.plist in Resources */,
+				F87076372041D1BC00411A62 /* Info.plist in Resources */,
 				FF89B5E11FAFA7F8003ABD18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,25 +391,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F870763E2041D32200411A62 /* ContinentListViewController.swift in Sources */,
+				F870763A2041D21100411A62 /* GetSmartUserDefaults.swift in Sources */,
 				FF89B6141FAFB4D7003ABD18 /* Country.swift in Sources */,
-				FF89B60C1FAFAA47003ABD18 /* Reusable.swift in Sources */,
-				FF89B61A1FAFBB51003ABD18 /* StringExtension.swift in Sources */,
-				F8E826071FDC502500BAAD4E /* CDCountry.swift in Sources */,
-				FF89B61C1FB0581F003ABD18 /* AnswerCell.swift in Sources */,
-				FF993A331FB1159D0043E1F8 /* ViewController.swift in Sources */,
-				FF89B60E1FAFAA78003ABD18 /* ContinentCell.swift in Sources */,
-				F8E825FB1FDC3ED300BAAD4E /* World.xcdatamodeld in Sources */,
-				FF993A2F1FB111C70043E1F8 /* AnswerDetailCell.swift in Sources */,
-				FF89B6161FAFB64C003ABD18 /* ArrayExtension.swift in Sources */,
-				F8E826051FDC4F9600BAAD4E /* Region.swift in Sources */,
-				FF993A311FB111F00043E1F8 /* ResultsDetailViewController.swift in Sources */,
-				FF89B6121FAFB446003ABD18 /* PlistReader.swift in Sources */,
-				FF89B6181FAFB8B2003ABD18 /* QuizViewController.swift in Sources */,
-				FF89B5DC1FAFA7F8003ABD18 /* AppDelegate.swift in Sources */,
-				F8E826031FDC4E3D00BAAD4E /* CDContinent.swift in Sources */,
-				FF89B60A1FAFA993003ABD18 /* ContinentListViewController.swift in Sources */,
-				F8E826011FDC4C4400BAAD4E /* CoreDataStore.swift in Sources */,
-				FF89B6201FB060CA003ABD18 /* ResultsViewController.swift in Sources */,
+				F87076362041D1BC00411A62 /* AppDelegate.swift in Sources */,
+				F870762C2041D17400411A62 /* PlistReader.swift in Sources */,
+				F870760F2041CF3C00411A62 /* ResultsDetailViewController.swift in Sources */,
+				F870761D2041CFC300411A62 /* ArrayExtension.swift in Sources */,
+				F870760E2041CF3C00411A62 /* ResultsViewController.swift in Sources */,
+				F87076102041CF3C00411A62 /* AnswerDetailCell.swift in Sources */,
+				F87075FE2041CD6800411A62 /* CDContinent.swift in Sources */,
+				F870763D2041D32200411A62 /* ContinentCell.swift in Sources */,
+				F87076302041D18200411A62 /* AnswerCell.swift in Sources */,
+				F87075FF2041CD6800411A62 /* CoreDataStore.swift in Sources */,
+				F870761E2041CFC300411A62 /* StringExtension.swift in Sources */,
+				F8C011FD2042DC61005636B8 /* AnswerDetailWrongCell.swift in Sources */,
+				F87076202041CFDE00411A62 /* Reusable.swift in Sources */,
+				F870762F2041D18200411A62 /* QuizViewController.swift in Sources */,
+				F87075FC2041CD6800411A62 /* CDRegion.swift in Sources */,
+				F87075FD2041CD6800411A62 /* CDCountry.swift in Sources */,
+				F808352B2041D38300475C71 /* World.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AL85EHGD2;
-				INFOPLIST_FILE = GetSmart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GetSmart/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tufyx.GetSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AL85EHGD2;
-				INFOPLIST_FILE = GetSmart/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GetSmart/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tufyx.GetSmart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,13 +710,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F8E825F91FDC3ED300BAAD4E /* World.xcdatamodeld */ = {
+		F80835292041D38300475C71 /* World.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */,
+				F808352A2041D38300475C71 /* World.xcdatamodel */,
 			);
-			currentVersion = F8E825FA1FDC3ED300BAAD4E /* World.xcdatamodel */;
-			path = World.xcdatamodeld;
+			currentVersion = F808352A2041D38300475C71 /* World.xcdatamodel */;
+			name = World.xcdatamodeld;
+			path = CoreData/World.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

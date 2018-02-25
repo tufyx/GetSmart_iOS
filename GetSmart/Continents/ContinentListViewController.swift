@@ -12,7 +12,7 @@ import CoreData
 
 class ContinentListViewController: UITableViewController, Reusable {
 
-    var dataSource: [NSManagedObject] = []
+    var dataSource: [CDContinent] = []
     
     var coreDataStore: CoreDataStore = CoreDataStore()
 
@@ -20,13 +20,16 @@ class ContinentListViewController: UITableViewController, Reusable {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         
-        let request = NSFetchRequest<CDContinent>(entityName: "CDContinent")
         do {
-            dataSource = try coreDataStore.managedObjectContext.fetch(request)
+            dataSource = try coreDataStore.managedObjectContext.fetch(CDContinent.all)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,10 +38,8 @@ class ContinentListViewController: UITableViewController, Reusable {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ContinentCell = tableView.dequeueReusableCell(for: indexPath)
-        let item = dataSource[indexPath.row]
-        let name = item.value(forKey: "name") as! String
+        cell.viewData = ContinentCell.ViewData(continent: dataSource[indexPath.row])
         cell.delegate = self
-        cell.viewData = ContinentCell.ViewData(name: name)
         return cell
     }
 
@@ -54,8 +55,22 @@ class ContinentListViewController: UITableViewController, Reusable {
 
 extension ContinentListViewController: CellDelegate {
 
-    func didTapCell(continent: String) {
+    func didTapCellFor(continent: CDContinent) {
+        
+        if continent.countries?.count == 0 {
+            let alert = UIAlertController(
+                title: NSLocalizedString("Oooooops!", comment: "Error title for continent selection"),
+                message: NSLocalizedString("It seems like we don't have any questions in this set! Please try again later!", comment: "Error message displayed when not enough questions are available for a selected set"), preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: "Ok"), style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         let vc = storyboard!.loadViewControllerOfType(type: QuizViewController.self)
+        vc.continent = continent
         navigationController?.pushViewController(vc, animated: true)
     }
 

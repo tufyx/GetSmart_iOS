@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>countries</key>
+	<key>europe</key>
 	<array>
 		<dict>
 			<key>alpha3Code</key>
@@ -976,5 +976,15 @@
 			<string>Northern Europe</string>
 		</dict>
 	</array>
+	<key>africa</key>
+	<array/>
+	<key>north/central america &amp; carribeans</key>
+	<array/>
+	<key>south america</key>
+	<array/>
+	<key>asia</key>
+	<array/>
+	<key>oceania</key>
+	<array/>
 </dict>
 </plist>

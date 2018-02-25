@@ -46,17 +46,28 @@ class QuizViewController: UIViewController, Reusable {
     var options: [String] = []
     
     var countries: [Country] = []
+    
+    var continent: CDContinent?
+    
+    var coreDataStore: CoreDataStore = CoreDataStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let content = PlistReader(filename: "Europe").dictionary {
-            initialize(c: content)
+        if let content = continent?.countries {
+            countries = content.map({ (country) -> Country in
+                Country(country: country)
+            })
         }
-
+        initialize()
     }
 
     func getOptionsFrom(source: [String], or backup: [String]) -> [String] {
+        
+        if source.count == 0 && backup.count == 0 {
+            return []
+        }
+        
         var c = source.shuffled()
         var o: [String] = [currentCountry!.capital]
         var k: Int = 0
@@ -81,7 +92,7 @@ class QuizViewController: UIViewController, Reusable {
         while o.count < 4 {
             k += 1
             var capital = c.removeFirst()
-            while capital == currentCountry!.name {
+            while capital == currentCountry!.name || o.contains(capital) {
                 capital = c.removeFirst()
             }
             o.append(capital)
@@ -89,11 +100,7 @@ class QuizViewController: UIViewController, Reusable {
         return o.shuffled()
     }
 
-    func initialize(c: [String: Any]) {
-        let c_arr = c["countries"] as! [[String: Any]]
-        countries = c_arr.map({ (data) -> Country in
-            Country(data: data)
-        })
+    func initialize() {
 
         giveUpButton.addTarget(
             self,
@@ -101,7 +108,7 @@ class QuizViewController: UIViewController, Reusable {
             for: .touchUpInside
         )
 
-        let count = 10 + (Int(arc4random()) % countries.count/2)
+        let count = countries.count//10 + (Int(arc4random()) % countries.count/2)
         var c = countries.shuffled()
         var k: Int = 0
         while k < count {
@@ -118,7 +125,7 @@ class QuizViewController: UIViewController, Reusable {
 
     func nextQuestion() {
         currentCountry = remainingQuestions.removeFirst()
-        flagImage.image = UIImage(named: currentCountry!.name.forFlag)
+        flagImage.image = UIImage(named: currentCountry!.code)
         options = getOptionsFrom(
             source: countries.neighboursOf(country: currentCountry!).capitals,
             or: countries.inSameRegionAs(country: currentCountry!).capitals

@@ -27,6 +27,21 @@ class Country {
         self.subregion = data["subregion"] as! String
     }
     
+    init(country: CDCountry) {
+        self.code = country.code
+        self.name = country.name
+        self.capital = country.capital
+        self.flag = country.flag
+        if let borders = country.neighbours {
+            self.borders = borders.map({ (cdc) -> String in
+                cdc.code
+            })
+        } else {
+            self.borders = []
+        }
+        self.subregion = country.region.name
+    }
+    
     static let Unknown: Country = Country(data:
         ["alpha3Code": "-",
          "name": "-",

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2g9-Wu-ZVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2g9-Wu-ZVa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,27 +112,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question x/n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-Lq-h5I">
-                                <rect key="frame" x="20" y="20" width="118" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the capital of [COUNTRY]?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fO-WD-eQZ">
-                                <rect key="frame" x="20" y="78" width="335" height="82"/>
+                                <rect key="frame" x="20" y="80" width="335" height="82"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="algeria" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-6G-7yd">
-                                <rect key="frame" x="127" y="168" width="120" height="80"/>
+                                <rect key="frame" x="127" y="170" width="120" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="jfT-7E-bcl"/>
                                     <constraint firstAttribute="width" constant="120" id="zcV-HB-HEJ"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rfl-e5-WSi">
-                                <rect key="frame" x="0.0" y="256" width="375" height="411"/>
+                                <rect key="frame" x="0.0" y="258" width="375" height="409"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AnswerCell" rowHeight="70" id="RaD-31-Crm" customClass="AnswerCell" customModule="GetSmart" customModuleProvider="target">
@@ -162,41 +156,53 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROg-EF-XG9">
-                                <rect key="frame" x="277" y="13" width="78" height="40"/>
+                                <rect key="frame" x="277" y="20" width="78" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Give up!">
                                     <color key="titleColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MOY-PV-V4j">
+                                <rect key="frame" x="16" y="38.5" width="241" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="AFa-Z5-QVm"/>
+                                </constraints>
+                            </progressView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-i0-6ny">
+                                <rect key="frame" x="306" y="30" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9fO-WD-eQZ" firstAttribute="leading" secondItem="PDa-Lq-h5I" secondAttribute="leading" id="1jN-iC-bO4"/>
                             <constraint firstItem="Rfl-e5-WSi" firstAttribute="leading" secondItem="oZz-Yr-zJu" secondAttribute="leading" id="5cx-Uz-tXz"/>
                             <constraint firstItem="oZz-Yr-zJu" firstAttribute="trailing" secondItem="ROg-EF-XG9" secondAttribute="trailing" constant="20" id="63i-7V-fMS"/>
-                            <constraint firstItem="9fO-WD-eQZ" firstAttribute="top" secondItem="PDa-Lq-h5I" secondAttribute="bottom" constant="30" id="6bm-Ia-muV"/>
                             <constraint firstItem="Rfl-e5-WSi" firstAttribute="bottom" secondItem="oZz-Yr-zJu" secondAttribute="bottom" id="FOu-68-CdN"/>
+                            <constraint firstItem="ROg-EF-XG9" firstAttribute="leading" secondItem="MOY-PV-V4j" secondAttribute="trailing" constant="20" id="Hcl-sY-Od4"/>
+                            <constraint firstItem="MOY-PV-V4j" firstAttribute="leading" secondItem="hM7-WA-XIL" secondAttribute="leadingMargin" id="I8h-7Z-6wv"/>
                             <constraint firstItem="9fO-WD-eQZ" firstAttribute="centerX" secondItem="hM7-WA-XIL" secondAttribute="centerX" id="JdJ-Ja-9jR"/>
+                            <constraint firstItem="9fO-WD-eQZ" firstAttribute="top" secondItem="ROg-EF-XG9" secondAttribute="bottom" constant="20" id="Mxn-Um-Kns"/>
                             <constraint firstItem="9fO-WD-eQZ" firstAttribute="leading" secondItem="oZz-Yr-zJu" secondAttribute="leading" constant="20" id="P2w-ra-Fc8"/>
                             <constraint firstItem="Rfl-e5-WSi" firstAttribute="trailing" secondItem="oZz-Yr-zJu" secondAttribute="trailing" id="SCX-as-lby"/>
                             <constraint firstItem="NhT-6G-7yd" firstAttribute="centerX" secondItem="hM7-WA-XIL" secondAttribute="centerX" id="TzM-5M-0qh"/>
                             <constraint firstItem="oZz-Yr-zJu" firstAttribute="trailing" secondItem="9fO-WD-eQZ" secondAttribute="trailing" constant="20" id="X5A-1r-6ip"/>
                             <constraint firstItem="Rfl-e5-WSi" firstAttribute="top" secondItem="NhT-6G-7yd" secondAttribute="bottom" constant="8" id="YDs-EO-w4F"/>
-                            <constraint firstItem="ROg-EF-XG9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hM7-WA-XIL" secondAttribute="leading" constant="20" symbolic="YES" id="e3d-Ho-G9q"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PDa-Lq-h5I" secondAttribute="trailing" constant="20" symbolic="YES" id="hSR-47-xG8"/>
+                            <constraint firstItem="ROg-EF-XG9" firstAttribute="top" secondItem="hM7-WA-XIL" secondAttribute="top" constant="20" id="jqO-1y-gVJ"/>
                             <constraint firstItem="NhT-6G-7yd" firstAttribute="top" secondItem="9fO-WD-eQZ" secondAttribute="bottom" constant="8" id="loR-hh-tZ1"/>
-                            <constraint firstItem="ROg-EF-XG9" firstAttribute="centerY" secondItem="PDa-Lq-h5I" secondAttribute="centerY" id="m7z-xZ-Drp"/>
-                            <constraint firstItem="PDa-Lq-h5I" firstAttribute="top" secondItem="oZz-Yr-zJu" secondAttribute="top" id="vIm-yy-DZs"/>
+                            <constraint firstItem="5wD-i0-6ny" firstAttribute="centerX" secondItem="ROg-EF-XG9" secondAttribute="centerX" id="miH-HY-T3K"/>
+                            <constraint firstItem="ROg-EF-XG9" firstAttribute="centerY" secondItem="MOY-PV-V4j" secondAttribute="centerY" id="tFj-6a-ax8"/>
+                            <constraint firstItem="5wD-i0-6ny" firstAttribute="centerY" secondItem="ROg-EF-XG9" secondAttribute="centerY" id="xDA-em-r53"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oZz-Yr-zJu"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="5wD-i0-6ny" id="fSJ-nt-mnv"/>
                         <outlet property="answerList" destination="Rfl-e5-WSi" id="LUn-fS-qG8"/>
                         <outlet property="flagImage" destination="NhT-6G-7yd" id="tIa-gY-Fda"/>
                         <outlet property="giveUpButton" destination="ROg-EF-XG9" id="TlX-Bb-2oa"/>
-                        <outlet property="labelProgress" destination="PDa-Lq-h5I" id="idf-Px-5bs"/>
                         <outlet property="labelQuestion" destination="9fO-WD-eQZ" id="WVW-7m-waJ"/>
+                        <outlet property="progressBar" destination="MOY-PV-V4j" id="XG5-jK-kEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTR-zW-miW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,7 +270,7 @@
             </objects>
             <point key="canvasLocation" x="2367.1999999999998" y="132.68365817091455"/>
         </scene>
-        <!--Results Detail View Controller-->
+        <!--Details-->
         <scene sceneID="WhO-ho-R5D">
             <objects>
                 <viewController storyboardIdentifier="ResultsDetailViewController" id="wdx-j6-w9r" customClass="ResultsDetailViewController" customModule="GetSmart" customModuleProvider="target" sceneMemberID="viewController">
@@ -372,13 +378,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otv-gh-cpT">
-                                        <rect key="frame" x="161" y="21.5" width="53" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="157" y="26.5" width="61.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D82-8M-TYX">
-                                        <rect key="frame" x="318" y="17" width="37" height="30"/>
+                                        <rect key="frame" x="313" y="22.5" width="42" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Done"/>
                                     </button>
                                 </subviews>
@@ -388,7 +395,7 @@
                                     <constraint firstItem="otv-gh-cpT" firstAttribute="centerX" secondItem="C8X-el-Dfm" secondAttribute="centerX" id="7su-gf-jHg"/>
                                     <constraint firstAttribute="trailing" secondItem="D82-8M-TYX" secondAttribute="trailing" constant="20" id="aje-TL-DeT"/>
                                     <constraint firstItem="D82-8M-TYX" firstAttribute="centerY" secondItem="otv-gh-cpT" secondAttribute="centerY" id="ciD-VI-kmB"/>
-                                    <constraint firstItem="otv-gh-cpT" firstAttribute="centerY" secondItem="C8X-el-Dfm" secondAttribute="centerY" id="tFo-w2-fie"/>
+                                    <constraint firstAttribute="bottom" secondItem="otv-gh-cpT" secondAttribute="bottom" constant="10" id="qOB-ex-yUf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -404,7 +411,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ScU-qF-jTh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Ov-F5-ifL"/>
+                    <navigationItem key="navigationItem" title="Details" id="7Ov-F5-ifL"/>
                     <connections>
                         <outlet property="closeButton" destination="D82-8M-TYX" id="GtR-2D-V88"/>
                         <outlet property="tableView" destination="eQy-7i-hoN" id="hGv-oI-QyL"/>
@@ -413,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y1-GU-WsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3108" y="133"/>
+            <point key="canvasLocation" x="3106" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ToR-UY-gT9">

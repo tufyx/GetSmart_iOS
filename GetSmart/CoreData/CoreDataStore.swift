@@ -33,10 +33,6 @@ class CoreDataStore {
                 at:url,
                 options: options
             )
-            print("Successfully loaded the new database")
-            coordinator.persistentStores.forEach({ (store) in
-                print("url > \(store.url)")
-            })
         } catch {
             fatalError("Couldn't load database: \(error)")
         }

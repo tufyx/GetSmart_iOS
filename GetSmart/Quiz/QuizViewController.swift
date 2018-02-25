@@ -27,7 +27,9 @@ struct Answer {
 
 class QuizViewController: UIViewController, Reusable {
 
-    @IBOutlet weak var labelProgress: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var progressBar: UIProgressView!
 
     @IBOutlet weak var labelQuestion: UILabel!
 
@@ -53,7 +55,13 @@ class QuizViewController: UIViewController, Reusable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        giveUpButton.addTarget(
+            self,
+            action: #selector(didTapGiveUp),
+            for: .touchUpInside
+        )
+        
         if let content = continent?.countries {
             countries = content.map({ (country) -> Country in
                 Country(country: country)
@@ -101,14 +109,9 @@ class QuizViewController: UIViewController, Reusable {
     }
 
     func initialize() {
+        giveUpButton.isHidden = false
 
-        giveUpButton.addTarget(
-            self,
-            action: #selector(didTapGiveUp),
-            for: .touchUpInside
-        )
-
-        let count = countries.count//10 + (Int(arc4random()) % countries.count/2)
+        let count = 5 + (Int(arc4random()) % countries.count/2)
         var c = countries.shuffled()
         var k: Int = 0
         while k < count {
@@ -119,11 +122,15 @@ class QuizViewController: UIViewController, Reusable {
         answerList.dataSource = self
         answerList.delegate = self
         answerList.tableFooterView = UIView()
+        answerList.isUserInteractionEnabled = true
 
         nextQuestion()
     }
 
     func nextQuestion() {
+        let progress = Float(answers.count) / Float(answers.count + remainingQuestions.count)
+        progressBar.setProgress(progress, animated: true)
+        
         currentCountry = remainingQuestions.removeFirst()
         flagImage.image = UIImage(named: currentCountry!.code)
         options = getOptionsFrom(
@@ -135,8 +142,6 @@ class QuizViewController: UIViewController, Reusable {
             "What is the capital of [COUNTRY]?",
             comment: "What is the capital of [COUNTRY]?"
             ).forCountry(country: currentCountry!.name)
-
-        labelProgress.text = NSLocalizedString("\(remainingQuestions.count) remaining questions ", comment: "[X] remaining questions")
 
         answerList.reloadData()
 
@@ -181,16 +186,28 @@ extension QuizViewController: AnswerCellDelegate {
             )
         )
 
-        if remainingQuestions.count == 0 {
-            let vc = storyboard?.loadViewControllerOfType(type: ResultsViewController.self)
-            vc?.answers = answers
-            vc?.delegate = self
-            vc?.modalTransitionStyle = .crossDissolve
-            navigationController?.pushViewController(vc!, animated: true)
+        if remainingQuestions.count > 0 {
+            nextQuestion()
             return
         }
 
-        nextQuestion()
+        progressBar.setProgress(1.0, animated: true)
+        giveUpButton.isHidden = true
+        answerList.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { (t) in
+            self.activityIndicator.stopAnimating()
+            self.displayResults()
+            t.invalidate()
+        })
+    }
+    
+    func displayResults() {
+        let vc = storyboard?.loadViewControllerOfType(type: ResultsViewController.self)
+        vc?.answers = answers
+        vc?.delegate = self
+        vc?.modalTransitionStyle = .crossDissolve
+        navigationController?.pushViewController(vc!, animated: true)
     }
 
 }

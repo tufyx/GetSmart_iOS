@@ -23,7 +23,6 @@
 		F87076302041D18200411A62 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870762E2041D18200411A62 /* AnswerCell.swift */; };
 		F87076352041D1BC00411A62 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = F87076322041D1BC00411A62 /* Countries.plist */; };
 		F87076362041D1BC00411A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87076332041D1BC00411A62 /* AppDelegate.swift */; };
-		F87076372041D1BC00411A62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F87076342041D1BC00411A62 /* Info.plist */; };
 		F870763A2041D21100411A62 /* GetSmartUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87076392041D21000411A62 /* GetSmartUserDefaults.swift */; };
 		F870763D2041D32200411A62 /* ContinentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763B2041D32100411A62 /* ContinentCell.swift */; };
 		F870763E2041D32200411A62 /* ContinentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763C2041D32200411A62 /* ContinentListViewController.swift */; };
@@ -318,7 +317,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Vlad Tufis";
 				TargetAttributes = {
 					FF89B5D71FAFA7F8003ABD18 = {
@@ -365,7 +364,6 @@
 				FF89B5E61FAFA7F8003ABD18 /* LaunchScreen.storyboard in Resources */,
 				F87076352041D1BC00411A62 /* Countries.plist in Resources */,
 				FF89B5E31FAFA7F8003ABD18 /* Assets.xcassets in Resources */,
-				F87076372041D1BC00411A62 /* Info.plist in Resources */,
 				FF89B5E11FAFA7F8003ABD18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

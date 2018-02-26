@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F808352B2041D38300475C71 /* World.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F80835292041D38300475C71 /* World.xcdatamodeld */; };
+		F80C719420434A70005EE699 /* ContinentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C719320434A70005EE699 /* ContinentContainerViewController.swift */; };
+		F80C719620434F14005EE699 /* AnswerDetailWrongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C719520434F14005EE699 /* AnswerDetailWrongCell.swift */; };
+		F80C7198204351DD005EE699 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C7197204351DD005EE699 /* Difficulty.swift */; };
+		F80C719A204352DC005EE699 /* QuizBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C7199204352DC005EE699 /* QuizBuilder.swift */; };
+		F80C719C204353C6005EE699 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C719B204353C6005EE699 /* Question.swift */; };
+		F80C719F2044B641005EE699 /* SelectDifficultyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C719E2044B641005EE699 /* SelectDifficultyList.swift */; };
+		F80C71A12044B6E6005EE699 /* DifficultyLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80C71A02044B6E6005EE699 /* DifficultyLevelCell.swift */; };
 		F87075FC2041CD6800411A62 /* CDRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075F82041CD6700411A62 /* CDRegion.swift */; };
 		F87075FD2041CD6800411A62 /* CDCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075F92041CD6700411A62 /* CDCountry.swift */; };
 		F87075FE2041CD6800411A62 /* CDContinent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87075FA2041CD6800411A62 /* CDContinent.swift */; };
@@ -26,7 +33,6 @@
 		F870763A2041D21100411A62 /* GetSmartUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87076392041D21000411A62 /* GetSmartUserDefaults.swift */; };
 		F870763D2041D32200411A62 /* ContinentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763B2041D32100411A62 /* ContinentCell.swift */; };
 		F870763E2041D32200411A62 /* ContinentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870763C2041D32200411A62 /* ContinentListViewController.swift */; };
-		F8C011FD2042DC61005636B8 /* AnswerDetailWrongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */; };
 		FF89B5E11FAFA7F8003ABD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5DF1FAFA7F8003ABD18 /* Main.storyboard */; };
 		FF89B5E31FAFA7F8003ABD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */; };
 		FF89B5E61FAFA7F8003ABD18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF89B5E41FAFA7F8003ABD18 /* LaunchScreen.storyboard */; };
@@ -54,6 +60,13 @@
 
 /* Begin PBXFileReference section */
 		F808352A2041D38300475C71 /* World.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = World.xcdatamodel; sourceTree = "<group>"; };
+		F80C719320434A70005EE699 /* ContinentContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContinentContainerViewController.swift; path = Continents/ContinentContainerViewController.swift; sourceTree = "<group>"; };
+		F80C719520434F14005EE699 /* AnswerDetailWrongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerDetailWrongCell.swift; path = Results/AnswerDetailWrongCell.swift; sourceTree = "<group>"; };
+		F80C7197204351DD005EE699 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = Quiz/Difficulty.swift; sourceTree = "<group>"; };
+		F80C7199204352DC005EE699 /* QuizBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizBuilder.swift; path = Quiz/QuizBuilder.swift; sourceTree = "<group>"; };
+		F80C719B204353C6005EE699 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Question.swift; path = Quiz/Question.swift; sourceTree = "<group>"; };
+		F80C719E2044B641005EE699 /* SelectDifficultyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectDifficultyList.swift; path = Difficulty/SelectDifficultyList.swift; sourceTree = "<group>"; };
+		F80C71A02044B6E6005EE699 /* DifficultyLevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DifficultyLevelCell.swift; path = Difficulty/DifficultyLevelCell.swift; sourceTree = "<group>"; };
 		F87075F82041CD6700411A62 /* CDRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDRegion.swift; path = CoreData/CDRegion.swift; sourceTree = "<group>"; };
 		F87075F92041CD6700411A62 /* CDCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDCountry.swift; path = CoreData/CDCountry.swift; sourceTree = "<group>"; };
 		F87075FA2041CD6800411A62 /* CDContinent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDContinent.swift; path = CoreData/CDContinent.swift; sourceTree = "<group>"; };
@@ -73,7 +86,6 @@
 		F87076392041D21000411A62 /* GetSmartUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetSmartUserDefaults.swift; path = "User Defaults/GetSmartUserDefaults.swift"; sourceTree = "<group>"; };
 		F870763B2041D32100411A62 /* ContinentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContinentCell.swift; path = Continents/ContinentCell.swift; sourceTree = "<group>"; };
 		F870763C2041D32200411A62 /* ContinentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContinentListViewController.swift; path = Continents/ContinentListViewController.swift; sourceTree = "<group>"; };
-		F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerDetailWrongCell.swift; sourceTree = "<group>"; };
 		FF89B5D81FAFA7F8003ABD18 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF89B5E01FAFA7F8003ABD18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF89B5E21FAFA7F8003ABD18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80C719D2044B60F005EE699 /* Difficulty */ = {
+			isa = PBXGroup;
+			children = (
+				F80C7197204351DD005EE699 /* Difficulty.swift */,
+				F80C719E2044B641005EE699 /* SelectDifficultyList.swift */,
+				F80C71A02044B6E6005EE699 /* DifficultyLevelCell.swift */,
+			);
+			name = Difficulty;
+			sourceTree = "<group>";
+		};
 		F87075F72041CCFF00411A62 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +151,7 @@
 			children = (
 				F870763B2041D32100411A62 /* ContinentCell.swift */,
 				F870763C2041D32200411A62 /* ContinentListViewController.swift */,
+				F80C719320434A70005EE699 /* ContinentContainerViewController.swift */,
 			);
 			name = Continents;
 			sourceTree = "<group>";
@@ -136,7 +159,7 @@
 		F870760A2041CE0D00411A62 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				F8C011FC2042DC61005636B8 /* AnswerDetailWrongCell.swift */,
+				F80C719520434F14005EE699 /* AnswerDetailWrongCell.swift */,
 				F870760D2041CF3C00411A62 /* AnswerDetailCell.swift */,
 				F870760C2041CF3C00411A62 /* ResultsDetailViewController.swift */,
 				F870760B2041CF3C00411A62 /* ResultsViewController.swift */,
@@ -149,6 +172,8 @@
 			children = (
 				F870762E2041D18200411A62 /* AnswerCell.swift */,
 				F870762D2041D18200411A62 /* QuizViewController.swift */,
+				F80C7199204352DC005EE699 /* QuizBuilder.swift */,
+				F80C719B204353C6005EE699 /* Question.swift */,
 			);
 			name = Quiz;
 			sourceTree = "<group>";
@@ -222,6 +247,7 @@
 		FF89B5DA1FAFA7F8003ABD18 /* GetSmart */ = {
 			isa = PBXGroup;
 			children = (
+				F80C719D2044B60F005EE699 /* Difficulty */,
 				F870762A2041D12F00411A62 /* Support Files */,
 				F87076232041D10A00411A62 /* Utilities */,
 				F870761A2041CF9200411A62 /* Extension */,
@@ -394,18 +420,24 @@
 				FF89B6141FAFB4D7003ABD18 /* Country.swift in Sources */,
 				F87076362041D1BC00411A62 /* AppDelegate.swift in Sources */,
 				F870762C2041D17400411A62 /* PlistReader.swift in Sources */,
+				F80C719620434F14005EE699 /* AnswerDetailWrongCell.swift in Sources */,
 				F870760F2041CF3C00411A62 /* ResultsDetailViewController.swift in Sources */,
 				F870761D2041CFC300411A62 /* ArrayExtension.swift in Sources */,
+				F80C7198204351DD005EE699 /* Difficulty.swift in Sources */,
+				F80C719C204353C6005EE699 /* Question.swift in Sources */,
 				F870760E2041CF3C00411A62 /* ResultsViewController.swift in Sources */,
 				F87076102041CF3C00411A62 /* AnswerDetailCell.swift in Sources */,
 				F87075FE2041CD6800411A62 /* CDContinent.swift in Sources */,
+				F80C71A12044B6E6005EE699 /* DifficultyLevelCell.swift in Sources */,
+				F80C719A204352DC005EE699 /* QuizBuilder.swift in Sources */,
+				F80C719420434A70005EE699 /* ContinentContainerViewController.swift in Sources */,
 				F870763D2041D32200411A62 /* ContinentCell.swift in Sources */,
 				F87076302041D18200411A62 /* AnswerCell.swift in Sources */,
 				F87075FF2041CD6800411A62 /* CoreDataStore.swift in Sources */,
 				F870761E2041CFC300411A62 /* StringExtension.swift in Sources */,
-				F8C011FD2042DC61005636B8 /* AnswerDetailWrongCell.swift in Sources */,
 				F87076202041CFDE00411A62 /* Reusable.swift in Sources */,
 				F870762F2041D18200411A62 /* QuizViewController.swift in Sources */,
+				F80C719F2044B641005EE699 /* SelectDifficultyList.swift in Sources */,
 				F87075FC2041CD6800411A62 /* CDRegion.swift in Sources */,
 				F87075FD2041CD6800411A62 /* CDCountry.swift in Sources */,
 				F808352B2041D38300475C71 /* World.xcdatamodeld in Sources */,

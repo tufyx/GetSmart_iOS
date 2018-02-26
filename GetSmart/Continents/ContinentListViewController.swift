@@ -69,7 +69,7 @@ extension ContinentListViewController: CellDelegate {
             return
         }
         
-        let vc = storyboard!.loadViewControllerOfType(type: QuizViewController.self)
+        let vc = storyboard!.loadViewControllerOfType(type: SelectDifficultyList.self)
         vc.continent = continent
         navigationController?.pushViewController(vc, animated: true)
     }

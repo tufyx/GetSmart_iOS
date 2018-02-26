@@ -39,7 +39,7 @@ class QuizViewController: UIViewController, Reusable {
 
     @IBOutlet weak var giveUpButton: UIButton!
 
-    var remainingQuestions: [Country] = []
+    var remainingQuestions: [Question] = []
 
     var answers: [Answer] = []
 
@@ -52,6 +52,10 @@ class QuizViewController: UIViewController, Reusable {
     var continent: CDContinent?
     
     var coreDataStore: CoreDataStore = CoreDataStore()
+    
+    var quizBuilder: QuizBuilderProtocol?
+    
+    var userDefaults: GetSmartUserDefaultsProtocol = GetSmartUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,57 +71,15 @@ class QuizViewController: UIViewController, Reusable {
                 Country(country: country)
             })
         }
+        
         initialize()
-    }
-
-    func getOptionsFrom(source: [String], or backup: [String]) -> [String] {
-        
-        if source.count == 0 && backup.count == 0 {
-            return []
-        }
-        
-        var c = source.shuffled()
-        var o: [String] = [currentCountry!.capital]
-        var k: Int = 0
-        while o.count < 4 {
-            k += 1
-            if c.count == 0 {
-                break
-            }
-            
-            var capital = c.removeFirst()
-            while capital == currentCountry!.name {
-                capital = c.removeFirst()
-            }
-            o.append(capital)
-        }
-        
-        if o.count == 4 {
-            return o.shuffled()
-        }
-        
-        c = backup.shuffled()
-        while o.count < 4 {
-            k += 1
-            var capital = c.removeFirst()
-            while capital == currentCountry!.name || o.contains(capital) {
-                capital = c.removeFirst()
-            }
-            o.append(capital)
-        }
-        return o.shuffled()
     }
 
     func initialize() {
         giveUpButton.isHidden = false
-
-        let count = 5 + (Int(arc4random()) % countries.count/2)
-        var c = countries.shuffled()
-        var k: Int = 0
-        while k < count {
-            remainingQuestions.append(c.popLast()!)
-            k += 1
-        }
+        
+        quizBuilder = QuizBuilder(difficulty: userDefaults.difficulty, set: countries)
+        remainingQuestions = quizBuilder!.quiz
 
         answerList.dataSource = self
         answerList.delegate = self
@@ -131,12 +93,10 @@ class QuizViewController: UIViewController, Reusable {
         let progress = Float(answers.count) / Float(answers.count + remainingQuestions.count)
         progressBar.setProgress(progress, animated: true)
         
-        currentCountry = remainingQuestions.removeFirst()
+        let question = remainingQuestions.removeFirst()
+        currentCountry = question.country
         flagImage.image = UIImage(named: currentCountry!.code)
-        options = getOptionsFrom(
-            source: countries.neighboursOf(country: currentCountry!).capitals,
-            or: countries.inSameRegionAs(country: currentCountry!).capitals
-        )
+        options = question.answers
 
         labelQuestion.text = NSLocalizedString(
             "What is the capital of [COUNTRY]?",

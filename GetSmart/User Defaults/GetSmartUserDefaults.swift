@@ -12,6 +12,8 @@ protocol GetSmartUserDefaultsProtocol {
     
     var initialized: Bool { get set }
     
+    var difficulty: Difficulty { get set }
+    
 }
 
 class GetSmartUserDefaults: GetSmartUserDefaultsProtocol {
@@ -27,9 +29,21 @@ class GetSmartUserDefaults: GetSmartUserDefaultsProtocol {
         }
     }
     
-    init() {
-        defaults = UserDefaults.standard
+    var difficulty: Difficulty {
+        set {
+            defaults.setValue(newValue.serialized, forKeyPath: "difficulty")
+        }
+        get {
+            guard let d = defaults.dictionary(forKey: "difficulty") else {
+                return Difficulty.Easy
+            }
+            
+            return Difficulty(data: d)
+        }
     }
     
+    init() {
+        defaults = UserDefaults.standard
+    }    
     
 }
